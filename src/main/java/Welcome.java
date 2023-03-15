@@ -8,6 +8,7 @@ public class Welcome {
     public static void main(String[] args) {
 
         final int ROK = 2023;
+        final int MONTH = 3;
 
         var pensja = 100.50;
         int wiek_100;
