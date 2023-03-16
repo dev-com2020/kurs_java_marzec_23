@@ -26,9 +26,9 @@ public class Welcome {
 //        x = x + 4;
 //        x+= 4;
         int n = 12;
-//        n++;
+        n++;
 //        n--;
-
+        System.out.println(n);
 //        System.out.println(w);
 //        System.out.println("Witaj Orange!");
 //        System.out.println("Witaj Orange po raz drugi!");
@@ -36,7 +36,8 @@ public class Welcome {
 //        System.out.println(wiek_100);
 //        System.out.println(wynik);
 //        System.out.println(nc);
-        System.out.println(x == n);
+//        System.out.println(x == n);
+//        System.out.println(x);
 //        System.out.println(x != n);
 //        System.out.println(x < y ? x: y);
 // > < <= >=
