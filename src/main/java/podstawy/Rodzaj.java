@@ -1,5 +1,8 @@
 package podstawy;
 
 public enum Rodzaj {
-    DRUKOWANA, CYFROWA
+    DRUKOWANA, CYFROWA;
+
+    private String opis;
+
 }

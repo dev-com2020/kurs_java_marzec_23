@@ -2,10 +2,20 @@ package pracownik;
 
 import java.time.LocalDate;
 
+/**
+ * Obiekt <code>Employee</code> reprezentuje pracownika firmy
+ *
+ * @author TK
+ * @version 1.0
+ * @link www.comarch.pl
+ */
 public class Employee {
     //    private final String name;
     private String name = "";
     private double salary;
+    /**
+     * Data zatrudnienia pracownika
+     */
     private LocalDate hireDay;
     private static int nextId;
     private int id = assignId();
@@ -25,15 +35,18 @@ public class Employee {
     public Employee(String name) {
         this.name = name;
     }
-//    public pracownik.Employee(double s) {
-//        this("Pracownik " + nextId, s);
-//        nextId++;
-//    }
 
     public Employee() {
         this.name = "Nieznany";
         this.salary = 3200;
         this.hireDay = LocalDate.now();
+    }
+
+    public boolean equals(Object otherObject) {
+        if (this == otherObject) return true;
+        if (otherObject == null) return false;
+        Employee other = (Employee) otherObject;
+        return name.equals(other.name) && salary == other.salary;
     }
 
     public String getName() {
@@ -50,10 +63,15 @@ public class Employee {
 
     /**
      * Podnosi pensje o wskazany procent
+     *
+     * @param byPercent określa o ile procent podnosi pensję
+     * @return kwota podwyżki
+     * @throws java.io.IOError
      */
-    public void raiseSalary(double byPercent) {
+    public double raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
         salary += raise;
+        return raise;
     }
 
     public void setId() {
@@ -69,3 +87,4 @@ public class Employee {
         x.raiseSalary(200);
     }
 }
+
