@@ -1,3 +1,5 @@
+package podstawy;
+
 /**
  Pierwszy program w Java
  @version 1.0

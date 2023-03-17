@@ -1,3 +1,5 @@
+package podstawy;
+
 import java.text.NumberFormat;
 import java.util.Date;
 
@@ -16,6 +18,10 @@ public class Formatowanie {
         NumberFormat procent = NumberFormat.getPercentInstance();
         System.out.println(waluta.format(x));
         System.out.println(procent.format(x));
+
+        var message = new StringBuilder();
+        var message2 = new StringBuilder("Lista todo\n");
+
 
 
 

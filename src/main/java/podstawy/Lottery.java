@@ -1,3 +1,5 @@
+package podstawy;
+
 public class Lottery {
     public static void main(String[] args) {
         final int NMAX = 10;

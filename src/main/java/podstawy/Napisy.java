@@ -1,3 +1,5 @@
+package podstawy;
+
 public class Napisy {
     public static void main(String[] args) {
         String napis = "";
