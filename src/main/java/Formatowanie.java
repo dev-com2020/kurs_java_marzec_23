@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Date;
 
 public class Formatowanie {
@@ -11,6 +12,11 @@ public class Formatowanie {
         System.out.printf("Mamy miesiąc %tb\n",data);
         System.out.printf("Mamy rok %tY\n",data);
         System.out.println(data);
+        NumberFormat waluta = NumberFormat.getCurrencyInstance();
+        NumberFormat procent = NumberFormat.getPercentInstance();
+        System.out.println(waluta.format(x));
+        System.out.println(procent.format(x));
+
 
 
     }

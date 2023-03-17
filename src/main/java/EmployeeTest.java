@@ -14,10 +14,16 @@ public class EmployeeTest {
         staff[2] = new Employee("Asia", 8500, 2022, 4, 10);
 
 //        Employee harry = new Employee("Harry",2500,2023,2,1);
+        double percent = 10;
         var harry = new Employee("Harry",2500,2023,2,1);
+        harry.setId();
+        int n = Employee.getNextId();
+        Employee.tripleValue(harry);
+        harry.raiseSalary(percent);
+        System.out.println(n);
 
         for (Employee e: staff)
-            e.raiseSalary(5);
+            e.raiseSalary(5); // tomasz.raiseSalary, jakub.raiseSalary, asia.raiseSalary
 
         for (Employee e: staff)
             System.out.println("imie=" + e.getName() + " pensja=" + e.getSalary() + " data zatrudnienia=" + e.getHireDay());
@@ -30,9 +36,11 @@ public class EmployeeTest {
 }
 
 class Employee {
-    private String name;
+    private final String name;
     private double salary;
     private LocalDate hireDay;
+    private static int nextId = 1;
+    private int id;
 
     public Employee(String n, double s, int year, int month, int day) {
         name = n;
@@ -60,5 +68,16 @@ class Employee {
            double raise = salary * byPercent / 100;
         salary += raise;
     }
+    public void setId() {
+        id = nextId; // harry.id
+        nextId++; // Employee.nextId++
+    }
 
+    public static int getNextId() {
+        return nextId;
+    }
+
+    public static void tripleValue(Employee x){
+        x.raiseSalary(200);
+    }
 }
